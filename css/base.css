@@ -1,0 +1,67 @@
+:root {
+  /* --color-main: rgb(205, 92, 92); */
+
+  --color-main: rgb(102, 91, 205);
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loading-container {
+  width: 100px;
+}
+.loading {
+  fill: var(--color-main);
+  animation: hideshow 3s ease-in-out infinite;
+}
+
+.c1 {
+  animation-delay: 0s;
+}
+.c2 {
+  animation-delay: 1s;
+}
+.c3 {
+  animation-delay: 2s;
+}
+
+.pg-bg,
+.pg {
+  fill: var(--color-main);
+}
+
+.pg-bg {
+  opacity: 0.3;
+}
+
+.pg {
+  animation: progressbar 5s ease-in-out infinite;
+}
+
+@keyframes hideshow {
+  0% {
+    opacity: 0;
+    r: 20px;
+  }
+  50% {
+    opacity: 1;
+    r: 50px;
+  }
+  100% {
+    opacity: 0;
+    r: 20px;
+  }
+}
+
+@keyframes progressbar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 400px;
+  }
+}
